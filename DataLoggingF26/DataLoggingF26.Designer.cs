@@ -28,120 +28,121 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            groupBox1 = new GroupBox();
-            pictureBox1 = new PictureBox();
-            menuStrip1 = new MenuStrip();
-            fileToolStripMenuItem = new ToolStripMenuItem();
-            statusStrip1 = new StatusStrip();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            menuStrip1.SuspendLayout();
+            ExitButton = new Button();
+            ClearButton = new Button();
+            DrawButton = new Button();
+            ButtonGroupBox = new GroupBox();
+            DisplayPictureBox = new PictureBox();
+            TopMenuStrip = new MenuStrip();
+            FileTopMenuItem = new ToolStripMenuItem();
+            BottomStatusStrip = new StatusStrip();
+            ButtonGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)DisplayPictureBox).BeginInit();
+            TopMenuStrip.SuspendLayout();
             SuspendLayout();
             // 
-            // button1
+            // ExitButton
             // 
-            button1.Location = new Point(200, 26);
-            button1.Name = "button1";
-            button1.Size = new Size(91, 46);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            ExitButton.Location = new Point(200, 26);
+            ExitButton.Name = "ExitButton";
+            ExitButton.Size = new Size(91, 46);
+            ExitButton.TabIndex = 0;
+            ExitButton.Text = "Exit";
+            ExitButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // ClearButton
             // 
-            button2.Location = new Point(103, 26);
-            button2.Name = "button2";
-            button2.Size = new Size(91, 46);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            ClearButton.Location = new Point(103, 26);
+            ClearButton.Name = "ClearButton";
+            ClearButton.Size = new Size(91, 46);
+            ClearButton.TabIndex = 1;
+            ClearButton.Text = "Clear";
+            ClearButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // DrawButton
             // 
-            button3.Location = new Point(6, 26);
-            button3.Name = "button3";
-            button3.Size = new Size(91, 46);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            DrawButton.Location = new Point(6, 26);
+            DrawButton.Name = "DrawButton";
+            DrawButton.Size = new Size(91, 46);
+            DrawButton.TabIndex = 2;
+            DrawButton.Text = "Draw";
+            DrawButton.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // ButtonGroupBox
             // 
-            groupBox1.Controls.Add(button3);
-            groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(button2);
-            groupBox1.Location = new Point(488, 333);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(300, 78);
-            groupBox1.TabIndex = 3;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            ButtonGroupBox.Controls.Add(DrawButton);
+            ButtonGroupBox.Controls.Add(ExitButton);
+            ButtonGroupBox.Controls.Add(ClearButton);
+            ButtonGroupBox.Location = new Point(488, 333);
+            ButtonGroupBox.Name = "ButtonGroupBox";
+            ButtonGroupBox.Size = new Size(300, 84);
+            ButtonGroupBox.TabIndex = 3;
+            ButtonGroupBox.TabStop = false;
             // 
-            // pictureBox1
+            // DisplayPictureBox
             // 
-            pictureBox1.Location = new Point(12, 31);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(776, 296);
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
+            DisplayPictureBox.BackColor = Color.Black;
+            DisplayPictureBox.Location = new Point(12, 31);
+            DisplayPictureBox.Name = "DisplayPictureBox";
+            DisplayPictureBox.Size = new Size(776, 296);
+            DisplayPictureBox.TabIndex = 4;
+            DisplayPictureBox.TabStop = false;
             // 
-            // menuStrip1
+            // TopMenuStrip
             // 
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 28);
-            menuStrip1.TabIndex = 5;
-            menuStrip1.Text = "menuStrip1";
+            TopMenuStrip.ImageScalingSize = new Size(20, 20);
+            TopMenuStrip.Items.AddRange(new ToolStripItem[] { FileTopMenuItem });
+            TopMenuStrip.Location = new Point(0, 0);
+            TopMenuStrip.Name = "TopMenuStrip";
+            TopMenuStrip.Size = new Size(800, 28);
+            TopMenuStrip.TabIndex = 5;
+            TopMenuStrip.Text = "menuStrip1";
             // 
-            // fileToolStripMenuItem
+            // FileTopMenuItem
             // 
-            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(46, 24);
-            fileToolStripMenuItem.Text = "File";
+            FileTopMenuItem.Name = "FileTopMenuItem";
+            FileTopMenuItem.Size = new Size(46, 24);
+            FileTopMenuItem.Text = "File";
             // 
-            // statusStrip1
+            // BottomStatusStrip
             // 
-            statusStrip1.ImageScalingSize = new Size(20, 20);
-            statusStrip1.Location = new Point(0, 428);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(800, 22);
-            statusStrip1.TabIndex = 6;
-            statusStrip1.Text = "statusStrip1";
+            BottomStatusStrip.ImageScalingSize = new Size(20, 20);
+            BottomStatusStrip.Location = new Point(0, 428);
+            BottomStatusStrip.Name = "BottomStatusStrip";
+            BottomStatusStrip.Size = new Size(800, 22);
+            BottomStatusStrip.TabIndex = 6;
+            BottomStatusStrip.Text = "statusStrip1";
             // 
             // DataLoggingF26
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(statusStrip1);
-            Controls.Add(pictureBox1);
-            Controls.Add(groupBox1);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
+            Controls.Add(BottomStatusStrip);
+            Controls.Add(DisplayPictureBox);
+            Controls.Add(ButtonGroupBox);
+            Controls.Add(TopMenuStrip);
+            MainMenuStrip = TopMenuStrip;
             Name = "DataLoggingF26";
-            Text = "Form1";
-            groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Data Logging";
+            ButtonGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)DisplayPictureBox).EndInit();
+            TopMenuStrip.ResumeLayout(false);
+            TopMenuStrip.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private GroupBox groupBox1;
-        private PictureBox pictureBox1;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem fileToolStripMenuItem;
-        private StatusStrip statusStrip1;
+        private Button ExitButton;
+        private Button ClearButton;
+        private Button DrawButton;
+        private GroupBox ButtonGroupBox;
+        private PictureBox DisplayPictureBox;
+        private MenuStrip TopMenuStrip;
+        private ToolStripMenuItem FileTopMenuItem;
+        private StatusStrip BottomStatusStrip;
     }
 }
