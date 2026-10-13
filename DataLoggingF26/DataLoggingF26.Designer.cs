@@ -49,6 +49,7 @@
             ExitButton.TabIndex = 0;
             ExitButton.Text = "Exit";
             ExitButton.UseVisualStyleBackColor = true;
+            ExitButton.Click += ExitButton_Click;
             // 
             // ClearButton
             // 
@@ -58,6 +59,7 @@
             ClearButton.TabIndex = 1;
             ClearButton.Text = "Clear";
             ClearButton.UseVisualStyleBackColor = true;
+            ClearButton.Click += ClearButton_Click;
             // 
             // DrawButton
             // 
@@ -67,6 +69,7 @@
             DrawButton.TabIndex = 2;
             DrawButton.Text = "Draw";
             DrawButton.UseVisualStyleBackColor = true;
+            DrawButton.Click += DrawButton_Click;
             // 
             // ButtonGroupBox
             // 
