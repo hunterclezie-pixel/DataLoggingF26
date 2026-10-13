@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             ExitButton = new Button();
             ClearButton = new Button();
             DrawButton = new Button();
@@ -36,6 +37,7 @@
             TopMenuStrip = new MenuStrip();
             FileTopMenuItem = new ToolStripMenuItem();
             BottomStatusStrip = new StatusStrip();
+            SampleTimer = new System.Windows.Forms.Timer(components);
             ButtonGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DisplayPictureBox).BeginInit();
             TopMenuStrip.SuspendLayout();
@@ -116,6 +118,11 @@
             BottomStatusStrip.TabIndex = 6;
             BottomStatusStrip.Text = "statusStrip1";
             // 
+            // SampleTimer
+            // 
+            SampleTimer.Interval = 250;
+            SampleTimer.Tick += SampleTimer_Tick;
+            // 
             // DataLoggingF26
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -147,5 +154,6 @@
         private MenuStrip TopMenuStrip;
         private ToolStripMenuItem FileTopMenuItem;
         private StatusStrip BottomStatusStrip;
+        private System.Windows.Forms.Timer SampleTimer;
     }
 }
