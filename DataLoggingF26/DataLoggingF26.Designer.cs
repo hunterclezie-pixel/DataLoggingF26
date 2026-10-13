@@ -120,7 +120,6 @@
             // 
             // SampleTimer
             // 
-            SampleTimer.Interval = 250;
             SampleTimer.Tick += SampleTimer_Tick;
             // 
             // DataLoggingF26

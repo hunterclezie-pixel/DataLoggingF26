@@ -23,12 +23,32 @@ namespace DataLoggingF26
 
             g.ScaleTransform(scaleX, -scaleY); // Flip the y-axis and scale the coordinates
             g.TranslateTransform(0, -1023); // Move the origin to the bottom left corner
+            DrawVerticalLine(x);
             g.DrawLine(myPen, lastX, lastY, x, y);
             lastX = x;
             lastY = y;
 
             // Free up resources
             myPen.Dispose();
+            g.Dispose();
+        }
+
+        void DrawVerticalLine(int x)
+        {
+            // Constructor for graphics object to draw on the PictureBox
+            Graphics g = DisplayPictureBox.CreateGraphics();
+
+            // Constructor for brush
+            Brush myBrush = new SolidBrush(Color.Black);
+            float scaleX = DisplayPictureBox.Width / 100f;
+            float scaleY = DisplayPictureBox.Height / 1023f;
+
+            g.ScaleTransform(scaleX, -scaleY); // Flip the y-axis and scale the coordinates
+            g.TranslateTransform(0, -1023); // Move the origin to the bottom left corner
+            g.FillRectangle(myBrush, x, 0, x, 1023);
+
+            // Free up resources
+            myBrush.Dispose();
             g.Dispose();
         }
 
@@ -67,7 +87,7 @@ namespace DataLoggingF26
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
-
+            DisplayPictureBox.Refresh(); // Clear the PictureBox
         }
 
         private void DrawButton_Click(object sender, EventArgs e)
