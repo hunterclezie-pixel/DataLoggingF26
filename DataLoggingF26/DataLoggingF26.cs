@@ -13,6 +13,11 @@ namespace DataLoggingF26
             Graphics g = DisplayPictureBox.CreateGraphics();
             // Constructor for pen
             Pen myPen = new Pen(Color.Green, 3);
+            float scaleX = DisplayPictureBox.Width / 100f;
+            float scaleY = DisplayPictureBox.Height / 1023f;
+
+            g.ScaleTransform(scaleX, -scaleY); // Flip the y-axis and scale the coordinates
+            g.TranslateTransform(0, -1023); // Move the origin to the bottom left corner
             g.DrawLine(myPen, 0, 0, x, y);
 
             // Free up resources
@@ -35,7 +40,7 @@ namespace DataLoggingF26
 
         private void DrawButton_Click(object sender, EventArgs e)
         {
-            DrawLine(100,100);
+            DrawLine(90,1000);
         }
     }
 }
